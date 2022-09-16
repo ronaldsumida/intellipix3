@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "intellipixdemo-3d27"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "intellipixdemo-3d27"
+  template:
+    metadata:
+      labels:
+        app: "intellipixdemo-3d27"
+    spec:
+      containers:
+        - name: "intellipixdemo-3d27"
+          image: "intellipix20220914105637.azurecr.io/intellipixdemo"
+          ports:
+          - containerPort: 80
